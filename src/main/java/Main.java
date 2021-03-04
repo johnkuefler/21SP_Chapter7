@@ -11,7 +11,7 @@
 public class Main {
 
     public static void main(String[] args) {
-        //int[] months = new int[12];
+        //int[] months = new inta[12];
         //months[0] = 1;
 
         int[] months = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12};
@@ -25,26 +25,27 @@ public class Main {
             System.out.println(month);
         }
 
-        printArray(months);
+        System.out.println(printArray(months));
 
         String[] names = new String[3];
         names[0] = "John";
         names[1] = "Lucy";
         names[2] = "Scott";
-        printArray(names);
+        System.out.println(printArray(names));
 
         int[] myNumbers = {1, 2, 3};
         // don't do this!       
         // int[] myNumbers2 = myNumbers;
         int [] myNumbers2 = copyArray(myNumbers);
         
-        System.out.println(myNumbers);
-        System.out.println(myNumbers2);
+        System.out.println(printArray(myNumbers));
+        System.out.println(printArray(myNumbers2));
         
         myNumbers2[0] = 99;
         
-        printArray(myNumbers);
-        printArray(myNumbers2);
+        System.out.println(printArray(myNumbers));
+        
+        System.out.println(printArray(myNumbers2));
 
     }
     
@@ -59,21 +60,21 @@ public class Main {
     }
     
 
-    public static void printArray(int[] arrayToPrint) {
+    public static String printArray(int[] arrayToPrint) {
         String output = "[";
         for (int item : arrayToPrint) {
             output += item + ",";
         }
         output += "]";
-        System.out.println(output);
+        return output;
     }
 
-    public static void printArray(String[] arrayToPrint) {
+    public static String printArray(String[] arrayToPrint) {
         String output = "[";
         for (String item : arrayToPrint) {
             output += item + ",";
         }
         output += "]";
-        System.out.println(output);
+        return output;
     }
 }

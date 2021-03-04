@@ -25,5 +25,28 @@ public class MainTest {
         assertArrayEquals(expResult, result);
     }
 
+ 
+    @Test
+    public void testPrintArray_intArr() {
+        System.out.println("printArray");
+        int[] arrayToPrint = {1,2,3};
+        String expResult = "[1,2,3,]";
+        String result = Main.printArray(arrayToPrint);
+        assertEquals(expResult, result);
+    }
+
+    @Test
+    public void testPrintArray_StringArr() {
+        System.out.println("printArray");
+        String[] arrayToPrint = {"A","B","C"};
+        String expResult = "[A,B,C,]";
+        String result = Main.printArray(arrayToPrint);
+        assertEquals(expResult, result);
+    }
+
+    
+
+
+
        
 }
